@@ -1,3 +1,8 @@
 ﻿  Demo.cpp
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(48,18): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(168,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(173,56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(173,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(173,22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(175,71): warning C4305: 'argument': truncation from 'double' to 'float'
   Lesson06.vcxproj -> C:\Users\Cryst\source\repos\Grafika Komputer\vs\Debug\Lesson06.exe

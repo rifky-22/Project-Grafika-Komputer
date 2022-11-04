@@ -3,7 +3,6 @@
 
 
 Demo::Demo() {
-
 }
 
 
@@ -45,14 +44,14 @@ void Demo::ProcessInput(GLFWwindow* window) {
 	// zoom camera
 	// -----------
 	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS) {
-		if (fovy < 90) {
-			fovy += 0.01f;
+		if (posCamY < 90) {
+			posCamY += 0.1;
 		}
 	}
 
 	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
-		if (fovy > 0) {
-			fovy -= 0.01f;
+		if (posCamY > 0) {
+			posCamY -= 0.1f;
 		}
 	}
 
@@ -98,17 +97,13 @@ void Demo::ProcessInput(GLFWwindow* window) {
 	viewCamY += angleZ * 2;
 
 	// limit the rotation around the x-axis
-	if ((viewCamY - posCamY) > 8) {
-		viewCamY = posCamY + 8;
+	if ((viewCamY - posCamY) > 20) {
+		viewCamY = posCamY + 20;
 	}
-	if ((viewCamY - posCamY) < -8) {
-		viewCamY = posCamY - 8;
+	if ((viewCamY - posCamY) < -20) {
+		viewCamY = posCamY - 20;
 	}
 	RotateCamera(-angleY);
-
-
-
-
 }
 
 void Demo::Update(double deltaTime) {
@@ -142,26 +137,43 @@ void Demo::Render() {
 	GLint lightColorLoc = glGetUniformLocation(this->shaderProgram, "lightColor");
 	glUniform3f(lightColorLoc, 1.0f, 1.0f, 1.0f);
 	
-	//table
-	DrawColoredCube(11, 1, 25, -40, 7, -23, 140.0f / 255.0f, 102.0f / 255.0f, 69.0f / 255.0f);
-	DrawColoredCube( 1, 7,  1, -35, 4, -11, 140.0f / 255.0f, 102.0f / 255.0f, 69.0f / 255.0f);
-	DrawColoredCube( 1, 7,  1, -45, 4, -11, 140.0f / 255.0f, 102.0f / 255.0f, 69.0f / 255.0f);
-	DrawColoredCube( 1, 7,  1, -35, 4, -35, 140.0f / 255.0f, 102.0f / 255.0f, 69.0f / 255.0f);
-	DrawColoredCube( 1, 7,  1, -45, 4, -35, 140.0f / 255.0f, 102.0f / 255.0f, 69.0f / 255.0f);
-
-	//bed
-	DrawColoredCube(34, 1.5,   21, -30,   1,   35,  89.0f / 255.0f,  87.0f / 255.0f,  84.0f / 255.0f);
-	DrawColoredCube(31,   2,   18, -30, 2.5,   35,  89.0f / 255.0f,  87.0f / 255.0f,  84.0f / 255.0f);
-	DrawColoredCube(26, 0.5, 18.5, -27, 3.5,   35, 168.0f / 255.0f, 168.0f / 255.0f, 167.0f / 255.0f);
-	DrawColoredCube(26, 2.5,  0.5, -27, 2.5, 25.5, 168.0f / 255.0f, 168.0f / 255.0f, 167.0f / 255.0f);
-	DrawColoredCube(26, 2.5,  0.5, -27, 2.5, 44.5, 168.0f / 255.0f, 168.0f / 255.0f, 167.0f / 255.0f);
-
-	//DrawColoredCube(11, 3, 7, 0, 3, 35, 89.0f / 255.0f, 87.0f / 255.0f, 84.0f / 255.0f);
-
-
+	DrawWall();
+	DrawTable();
+	DrawBed();
+	DrawLamp();
 	DrawColoredPlane();
-
 	glDisable(GL_DEPTH_TEST);
+}
+
+void Demo::DrawTable() {
+	DrawColoredCube(11, 1, 25, -40, 7, -23, 140.0f, 102.0f, 69.0f);
+	DrawColoredCube( 1, 7,  1, -35, 4, -11, 140.0f, 102.0f, 69.0f);
+	DrawColoredCube( 1, 7,  1, -45, 4, -11, 140.0f, 102.0f, 69.0f);
+	DrawColoredCube( 1, 7,  1, -35, 4, -35, 140.0f, 102.0f, 69.0f);
+	DrawColoredCube( 1, 7,  1, -45, 4, -35, 140.0f, 102.0f, 69.0f);
+}
+
+void Demo::DrawWall() {
+	DrawColoredCube(  1, 50, 100, -49.5, 10,     0, 109.0f, 214.0f, 116.0f);
+	DrawColoredCube(100, 50,   1,     0, 10, -49.5, 109.0f, 214.0f, 116.0f);
+	DrawColoredCube(  1, 50, 100,  49.5, 10,     0, 109.0f, 214.0f, 116.0f);
+	DrawColoredCube(100, 50,   1,     0, 10,  49.5, 109.0f, 214.0f, 116.0f);
+	DrawColoredCube(100,  1, 100,     0, 35,     0, 122.0f, 122.0f, 122.0f);
+}
+
+void Demo::DrawBed() {
+	DrawColoredCube( 3,   8,   20, -47,   1, 35, 125.0f, 105.0f,  61.0f);
+	DrawColoredCube(34,   2,   21, -30,   1, 35, 125.0f, 105.0f,  61.0f);
+	DrawColoredCube(31,   3,   18, -30, 2.5, 35,  89.0f,  87.0f,  84.0f);
+	DrawColoredCube(26, 3.1, 18.5, -27, 2.5, 35, 168.0f, 168.0f, 167.0f);
+}
+
+void Demo::DrawLamp() {
+	for (int i = 0; i < 5; i++) {
+		DrawColoredCube(0.5+(i*0.2), 0.25, 0.5+(i*0.2), 0, 32+(i*0.25), 0, 255.0f, 255.0f, 255.0f);
+	}
+	DrawColoredCube( 1.5,  0.5,  1.5, 0, 33.35, 0, 255.0f, 255.0f, 255.0f);
+	DrawColoredCube(0.75, 0.75, 0.75, 0,    34, 0,   0.0f,   0.0f,   0.0f);
 }
 
 void Demo::BuildColoredCube() {
@@ -254,7 +266,7 @@ void Demo::DrawColoredCube(float s1, float s2, float s3, float t1, float t2, flo
 	glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 
 	GLint objectColorLoc = glGetUniformLocation(this->shaderProgram, "objectColor");
-	glUniform3f(objectColorLoc, c1, c2, c3);
+	glUniform3f(objectColorLoc, c1 / 255.0f, c2 / 255.0f, c3 / 255.0f);
 
 	glm::mat4 model;
 	model = glm::translate(model, glm::vec3(t1, t2, t3));
@@ -316,7 +328,7 @@ void Demo::DrawColoredPlane()
 	glBindVertexArray(VAO2); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 
 	GLint objectColorLoc = glGetUniformLocation(this->shaderProgram, "objectColor");
-	glUniform3f(objectColorLoc, 0.8f, 0.8f, 0.8f);
+	glUniform3f(objectColorLoc, 179.0f/255.0f, 179.0f / 255.0f, 179.0f / 255.0f);
 
 	glm::mat4 model;
 
@@ -339,7 +351,7 @@ void Demo::InitCamera()
 	upCamX = 0.0f;
 	upCamY = 25.0f;
 	upCamZ = 0.0f;
-	CAMERA_SPEED = 0.05f;
+	CAMERA_SPEED = 0.1f;
 	fovy = 45.0f;
 	glfwSetInputMode(this->window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 }

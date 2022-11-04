@@ -24,6 +24,10 @@ private:
 	void BuildColoredPlane();
 	void DrawColoredCube(float s1, float s2, float s3, float t1, float t2, float t3, float c1, float c2, float c3);
 	void DrawColoredPlane();
+	void DrawTable();
+	void DrawWall();
+	void DrawBed();
+	void DrawLamp();
 	void MoveCamera(float speed);
 	void StrafeCamera(float speed);
 	void RotateCamera(float speed);
