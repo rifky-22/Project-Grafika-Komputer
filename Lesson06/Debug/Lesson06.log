@@ -1,8 +1,29 @@
 ﻿  Demo.cpp
 C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(48,18): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(168,69): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(173,56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(173,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(173,22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(175,71): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(190,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(191,68): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(192,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(193,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(194,68): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(195,68): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(205,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(208,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(212,76): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(215,68): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(215,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(260,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(265,75): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(266,75): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(311,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(311,85): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(312,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(312,85): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(313,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(331,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(331,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(331,24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(333,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(339,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(339,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Cryst\source\repos\Grafika Komputer\vs\Lesson06\Demo.cpp(339,22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Lesson06.vcxproj -> C:\Users\Cryst\source\repos\Grafika Komputer\vs\Debug\Lesson06.exe

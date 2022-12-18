@@ -13,7 +13,7 @@ public:
 	Demo();
 	~Demo();
 private:
-	GLuint shaderProgram, VBO, VAO, EBO, texture, VBO2, VAO2, EBO2, texture2;
+	GLuint shaderProgram, VBO, VAO, EBO, texture, VBO2, VAO2, EBO2, texture2, VBO3, VAO3, EBO3, texture3;
 	float viewCamX, viewCamY, viewCamZ, upCamX, upCamY, upCamZ, posCamX, posCamY, posCamZ, CAMERA_SPEED, fovy;
 	virtual void Init();
 	virtual void DeInit();
@@ -23,11 +23,21 @@ private:
 	void BuildColoredCube();
 	void BuildColoredPlane();
 	void DrawColoredCube(float s1, float s2, float s3, float t1, float t2, float t3, float c1, float c2, float c3);
-	void DrawColoredPlane();
-	void DrawTable();
-	void DrawWall();
-	void DrawBed();
-	void DrawLamp();
+	void DrawColoredPlane(); 
+	void Table();
+	void Wall();
+	void Bed(); 
+	void Monitor();
+	void Keyboard();
+	void Drawer();
+	void Lamp(int draw);
+	void Door();
+	void Cupboard();
+	void Watch();
+	void Carpet();
+	void Window();
+	void Shelf();
+	void Chair();
 	void MoveCamera(float speed);
 	void StrafeCamera(float speed);
 	void RotateCamera(float speed);
